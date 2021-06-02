@@ -1,23 +1,45 @@
 package travel_transport;
 
-public class Advertising_Marketting {
+import java.util.*;
 
+public class Advertising_Marketting { //1.3 User defined class
+    //1.2 Predefined Class
+	Scanner in = new Scanner(System.in);
 	String socialmedia, printmedia, description;
 	double discount;
 	
 	public Advertising_Marketting() { //1.4 Constructor with no argument
-		this.description = typeOfAdvertisement();
+		
+		System.out.println(typeOfAdvertisement());
+		System.out.println("Enter 1 to view online marketting, 2 for offline marketting");
+		int choice;
+		choice = in.nextInt();
+		in.nextLine();
+		
+		if(choice == 1) {
+			System.out.println("Enter social media name:");
+			this.socialmedia = in.nextLine();
+			this.description = onlineAdvertisement();
+		}
+		else if(choice == 2) {
+			System.out.println("Enter media name:");
+			this.printmedia = in.nextLine();
+			System.out.println("Enter amount of discount:");
+			this.discount = in.nextDouble();
+			in.nextLine();
+			this.description = offlineAdvertisement();
+		}
 	}
 	
 	public Advertising_Marketting(String sm) { //1.4 Constructor with one argument
-		socialmedia=sm;
+		this.socialmedia=sm;
 		
 		this.description = onlineAdvertisement();
 	}
 	
 	public Advertising_Marketting(String pm, double d) { //1.4 Constructor with two arguments
-		printmedia=pm;
-		discount=d;
+		this.printmedia=pm;
+		this.discount=d;
 		
 		this.description = offlineAdvertisement();
 	}
