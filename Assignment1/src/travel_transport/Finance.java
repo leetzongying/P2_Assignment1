@@ -2,14 +2,15 @@ package travel_transport;
 
 import java.util.*;
 
-public class Finance {
+public class Finance { //1.3 User defined class
+	//1.2 Predefined class
 	Scanner in = new Scanner(System.in);
 	
 	double income, expense, daily_profit, monthly_profit;
 	int day;
 	String month;
 	
-	public Finance() {
+	public Finance() { //1.4 Constructor with zero argument
 		System.out.println("Enter month: ");
 		this.month = in.nextLine();
 		this.income = dailyincome();
@@ -26,7 +27,7 @@ public class Finance {
 		}
 	}
 	
-	public Finance(String m){
+	public Finance(String m){ //1.4 Constructor with one argument
 		this.month = m;
 		this.income = dailyincome();
 		this.expense = dailyexpense();
@@ -42,7 +43,7 @@ public class Finance {
 		}
 	}
 	
-	public Finance(double i, double e) {
+	public Finance(double i, double e) { //1.4 Constructor with 2 arguments
 		System.out.println("Enter month: ");
 		this.month = in.nextLine();
 		this.income = i;
