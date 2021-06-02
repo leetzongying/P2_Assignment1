@@ -2,14 +2,15 @@ package travel_transport;
 
 import java.util.*;
 
-public class Customer {
+public class Customer { //1.3 User defined class
+	//1.2 Predefined class
 	Scanner in = new Scanner(System.in);
 	
 	String name, departure, destination, phone;
 	int age;
 	double price, discount, finalprice;
 	
-	public Customer() {
+	public Customer() { //1.4 Constructor with zero argument
 		System.out.println("Enter name of customer:");
 		this.name = in.nextLine();
 		System.out.println("Enter age:");
@@ -24,7 +25,7 @@ public class Customer {
 		calFinalprice(age);
 	}
 	
-	public Customer(int a) {
+	public Customer(int a) { //1.4 Constructor with one argument
 		System.out.println("Enter name of customer:");
 		this.name = in.nextLine();
 		this.age = a;
@@ -37,7 +38,7 @@ public class Customer {
 		calFinalprice(a);
 	}
 	
-	public Customer(int a, int b) {
+	public Customer(int a, int b) { //1.4 Constructor with 2 arguments
 		System.out.println("Enter name of customer:");
 		this.name = in.nextLine();
 		this.age = a;
