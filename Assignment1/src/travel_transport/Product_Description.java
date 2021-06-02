@@ -2,14 +2,15 @@ package travel_transport;
 
 import java.util.*;
 
-public class Product_Description {
+public class Product_Description { //1.3 User Defined Class
+	//1.2 Predefined class
 	Scanner in = new Scanner(System.in);
 	
 	String departure, destination, description;
 	int pkg;
 	double price, discount;
 	
-	public Product_Description() {	
+	public Product_Description() {	//1.4 Constructor with zero argument
 		System.out.println("Enter number set for travel package:");
 		this.pkg = in.nextInt();
 		in.nextLine();
@@ -25,7 +26,7 @@ public class Product_Description {
 		this.description = addDescription();
 	}
 
-	public Product_Description(int a) {	
+	public Product_Description(int a) {	//1.4 Constructor with one argument
 		this.pkg = a;
 		System.out.println("Enter location of start departure:");
 		this.departure = in.nextLine();
@@ -39,7 +40,7 @@ public class Product_Description {
 		this.description = addDescription();
 	}
 	
-	public Product_Description(String a, String b) {
+	public Product_Description(String a, String b) { //1.4 Constructor with 2 arguments
 		System.out.println("Enter number set for travel package:");
 		this.pkg = in.nextInt();
 		in.nextLine();
