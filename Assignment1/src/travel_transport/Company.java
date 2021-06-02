@@ -2,14 +2,14 @@ package travel_transport;
 
 import java.util.*;
 
-public class Company {
-	
+public class Company { //1.3 User defined class
+	//1.2 Predefined class
 	Scanner in = new Scanner(System.in);
 	
 	String company, name;
 	int yearEstablished;
 	
-	public Company() {
+	public Company() { //1.4 Constructor with zero argument
 		System.out.println("Enter name of company:");
 		this.company = in.nextLine();
 		System.out.println("Enter name of CEO:");
@@ -19,7 +19,7 @@ public class Company {
 		in.nextLine();
 	}
 	
-	public Company(String c, String n, int y) {
+	public Company(String c, String n, int y) { //1.4 Constructor with 2 argument
 		this.company = c;
 		this.name = n;
 		this.yearEstablished = y;
