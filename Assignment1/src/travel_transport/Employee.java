@@ -2,15 +2,15 @@ package travel_transport;
 
 import java.util.*;
 
-public class Employee {
-
+public class Employee { //1.3 User defined class
+        //1.2 Predefined class
 	Scanner in = new Scanner(System.in);
 	
 	String name, position, ID;
 	int hour;
 	double salary;
 	
-	public Employee() {
+	public Employee() { //1.4 Constructor with zero argument
 		System.out.println("Enter name of employee:");
 		this.name = in.nextLine();
 		System.out.println("Enter name of position:");
@@ -23,7 +23,7 @@ public class Employee {
 		this.hour = in.nextInt();
 	}
 	
-	public Employee(String p) {
+	public Employee(String p) { //1.4 Constructor with one argument
 		this.position = p;
 
 		System.out.println("Enter name of employee:");
@@ -46,7 +46,7 @@ public class Employee {
 		}
 	}
 	
-	public Employee(String p, double s) {
+	public Employee(String p, double s) { //1.4 Constructor with 2 arguments
 		this.position = p;
 		this.salary = s;
 		
